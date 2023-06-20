@@ -16,7 +16,7 @@
 
 [Test-Cases](https://docs.google.com/document/d/1pY59HqLGPSh0zfTE2pi7HY2jPDjBILkpyQt35pxN5UQ/edit?usp=sharing)
 
-[Bug-Reports]()
+[Bug-Reports](https://docs.google.com/document/d/1Bl_1TitwzucdIaILexVC7jmqCgqhg_sIuulRtj1Gh1o/edit?usp=sharing)
 
 [SQL Queries](https://github.com/KristinaSuvora/SQL-Queries/blob/main/queries_suvora.sql) 
 
