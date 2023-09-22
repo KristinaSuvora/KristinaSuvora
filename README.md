@@ -1,6 +1,6 @@
 ## I'm a QA Engineer @KristinaSuvora
 ### My CV
-[Link to my CV](https://drive.google.com/file/d/1jPqUT0asOjyh2BSvY9kvqTFhLM42lUIo/view?usp=sharing)
+[Link to my CV](https://drive.google.com/file/d/1Gw7XT9fOGDzc4qq5qwfrIHSCV78HWUrJ/view?usp=sharing)
 ### Tools
 ![Postman](https://img.shields.io/badge/-Postman-000000?logo=postman)
 ![Swagger](https://img.shields.io/badge/-Swagger-000000?logo=swagger)
