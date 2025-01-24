@@ -1,29 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Выбор цвета
-    document.querySelectorAll('.color-option').forEach(option => {
-        option.addEventListener('click', function () {
-            document.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
-            this.classList.add('selected');
-            document.getElementById('favoriteColor').value = this.getAttribute('data-color');
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            contents.forEach(content => {
+                if (content.id === tab.dataset.tab) {
+                    content.classList.remove("hidden");
+                } else {
+                    content.classList.add("hidden");
+                }
+            });
         });
     });
 
-    // Выбор аватара
-    document.querySelectorAll('.avatar-option').forEach(option => {
-        option.addEventListener('click', function () {
-            document.querySelectorAll('.avatar-option').forEach(o => o.classList.remove('selected'));
-            this.classList.add('selected');
-            document.getElementById('avatar').value = this.getAttribute('data-avatar');
-        });
-    });
+    // Chat functionality placeholder
+    const sendButton = document.getElementById("sendMessage");
+    const inputField = document.getElementById("chatInput");
+    const chatBox = document.querySelector(".chat-box");
 
-    // Отправка формы
-    document.getElementById('registrationForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        localStorage.setItem('favoriteColor', document.getElementById('favoriteColor').value);
-        localStorage.setItem('avatar', document.getElementById('avatar').value);
-        localStorage.setItem('name', document.getElementById('name').value);
-        localStorage.setItem('dream', document.getElementById('dream').value);
-        window.location.href = 'main.html'; // Переход на страницу меню
-    });
+    if (sendButton && inputField && chatBox) {
+        sendButton.addEventListener("click", () => {
+            const message = inputField.value.trim();
+            if (message) {
+                const newMessage = document.createElement("div");
+                newMessage.classList.add("message", "sent");
+                newMessage.textContent = message;
+                chatBox.appendChild(newMessage);
+                inputField.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+    }
 });
+    
