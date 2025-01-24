@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
             this.classList.add('selected');
             document.getElementById('favoriteColor').value = this.getAttribute('data-color');
-            document.body.style.backgroundColor = this.getAttribute('data-color');
         });
     });
 
@@ -25,6 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const avatar = document.getElementById('avatar').value;
         localStorage.setItem('favoriteColor', favoriteColor);
         localStorage.setItem('avatar', avatar);
-        window.location.href = 'main.html';
+        alert('Ваш мир успешно создан!');
     });
 });
