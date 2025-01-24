@@ -7,21 +7,32 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="registration">
+    <div id="registration" class="centered-container">
         <h1>Добро пожаловать!</h1>
         <p>Заполните форму ниже, чтобы настроить приложение под себя:</p>
         <form id="registrationForm">
             <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="favoriteColor">Ваш любимый цвет:</label>
-            <input type="color" id="favoriteColor" name="favoriteColor" value="#ff69b4">
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 
-            <label for="age">Ваш возраст:</label>
-            <input type="number" id="age" name="age" required>
+            <label for="favoriteColor">Ваш любимый цвет:</label>
+            <div class="color-palette">
+                <div class="color-option" style="background-color: #FFD5E5;" data-color="#FFD5E5"></div>
+                <div class="color-option" style="background-color: #D5E8FF;" data-color="#D5E8FF"></div>
+                <div class="color-option" style="background-color: #D5FFD8;" data-color="#D5FFD8"></div>
+                <div class="color-option" style="background-color: #FFF5D5;" data-color="#FFF5D5"></div>
+            </div>
+            <input type="hidden" id="favoriteColor" name="favoriteColor" value="#FFD5E5">
+
+            <label for="avatar">Выберите аватар:</label>
+            <div class="avatar-selection">
+                <img src="avatars/avatar1.png" alt="Avatar 1" class="avatar-option" data-avatar="avatars/avatar1.png">
+                <img src="avatars/avatar2.png" alt="Avatar 2" class="avatar-option" data-avatar="avatars/avatar2.png">
+                <img src="avatars/avatar3.png" alt="Avatar 3" class="avatar-option" data-avatar="avatars/avatar3.png">
+            </div>
+            <input type="hidden" id="avatar" name="avatar" value="avatars/avatar1.png">
 
             <label for="dream">Ваша мечта:</label>
-            <input type="text" id="dream" name="dream" required>
+            <input type="text" id="dream" name="dream" placeholder="Например, поехать в Париж" required>
 
             <button type="submit">Создать мой мир</button>
         </form>
