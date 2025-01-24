@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Я просто хочу поговорить</title>
+    <title>Чат</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Я просто хочу поговорить</h1>
-    <p>Здесь будет чат или страница общения.</p>
+    <div class="header">
+        <button onclick="goBack()" class="back-button">&larr; Назад</button>
+        <h1>Чат</h1>
+    </div>
+    <div id="chat-container">
+        <div id="messages"></div>
+        <div id="chat-input">
+            <input type="text" id="messageInput" placeholder="Введите сообщение..." />
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'main.html';
+        }
+
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const messages = document.getElementById('messages');
+            
+            if (messageInput.value.trim() !== '') {
+                const newMessage = document.createElement('div');
+                newMessage.textContent = messageInput.value;
+                newMessage.classList.add('message');
+                messages.appendChild(newMessage);
+                messageInput.value = '';
+            }
+        }
+    </script>
 </body>
 </html>
