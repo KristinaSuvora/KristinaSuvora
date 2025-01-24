@@ -1,18 +1,29 @@
+document.querySelectorAll('.color-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        document.getElementById('favoriteColor').value = this.getAttribute('data-color');
+        document.body.style.backgroundColor = this.getAttribute('data-color');
+    });
+});
+
+document.querySelectorAll('.avatar-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.avatar-option').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        document.getElementById('avatar').value = this.getAttribute('data-avatar');
+    });
+});
+
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
-
-    // Get user input
     const name = document.getElementById('name').value;
     const favoriteColor = document.getElementById('favoriteColor').value;
-    const age = document.getElementById('age').value;
+    const avatar = document.getElementById('avatar').value;
     const dream = document.getElementById('dream').value;
-
-    // Save to localStorage (to simulate saving user preferences)
     localStorage.setItem('name', name);
     localStorage.setItem('favoriteColor', favoriteColor);
-    localStorage.setItem('age', age);
+    localStorage.setItem('avatar', avatar);
     localStorage.setItem('dream', dream);
-
-    // Redirect to the main page
     window.location.href = 'main.html';
 });
