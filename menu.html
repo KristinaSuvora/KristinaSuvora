@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Set the background color from localStorage
             const selectedColor = localStorage.getItem("favoriteColor");
             if (selectedColor) {
                 document.body.style.backgroundColor = selectedColor;
@@ -18,45 +17,15 @@
 <body>
     <div class="menu-container">
         <h1>Меню</h1>
-        <p>Добро пожаловать, Кристина!</p>
-        <p>Ваша мечта: сделать крутое приложение и получить кучу бабок</p>
-
+        <p>Добро пожаловать!</p>
         <div class="menu-grid">
-            <a href="planner.html" class="menu-item">
-                <h2>Планер</h2>
-                <p>Организуйте свой день, неделю или год</p>
-            </a>
-            <a href="places.html" class="menu-item">
-                <h2>Куда сходить</h2>
-                <p>Найдите интересные места поблизости</p>
-            </a>
-            <a href="short_trips.html" class="menu-item">
-                <h2>Ближайшие путешествия</h2>
-                <p>Запланируйте короткие поездки</p>
-            </a>
-            <a href="long_trips.html" class="menu-item">
-                <h2>Дальние путешествия</h2>
-                <p>Подготовьтесь к длительным поездкам</p>
-            </a>
-            <a href="inspiration.html" class="menu-item">
-                <h2>Вдохновение</h2>
-                <p>Получите дозу вдохновения</p>
-            </a>
-            <a href="chat.html" class="menu-item">
-                <h2>Я просто хочу поговорить</h2>
-                <p>Пообщайтесь с единомышленниками или психологом</p>
-            </a>
+            <a href="planner.html" class="menu-item">Планер</a>
+            <a href="places.html" class="menu-item">Куда сходить</a>
+            <a href="short_trips.html" class="menu-item">Ближайшие путешествия</a>
+            <a href="long_trips.html" class="menu-item">Дальние путешествия</a>
+            <a href="inspiration.html" class="menu-item">Вдохновение</a>
+            <a href="chat.html" class="menu-item">Я просто хочу поговорить</a>
         </div>
-
-        <button class="logout-btn" onclick="logout()">Выйти</button>
     </div>
-
-    <script>
-        function logout() {
-            // Clear localStorage and redirect to registration
-            localStorage.clear();
-            window.location.href = "index.html";
-        }
-    </script>
 </body>
 </html>
