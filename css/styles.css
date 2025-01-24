@@ -9,28 +9,45 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.5s ease;
 }
 
 .registration-container, .menu-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #6A7C6C;
+    margin-bottom: 20px;
+}
+
+.color-palette {
+    display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
-.menu-item {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-selection img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
