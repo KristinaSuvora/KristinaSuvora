@@ -7,77 +7,27 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <button onclick="goBack()" class="back-button">&larr; Назад</button>
+    <div class="planner-container">
         <h1>Планер</h1>
-    </div>
-    <div id="planner">
-        <input type="text" id="week-range" placeholder="Введите неделю: 20.01 - 26.01" />
-
-        <div class="planner-grid">
-            <div class="day">
-                <h3>Понедельник</h3>
-                <input type="text" placeholder="Дата: 21.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
-            <div class="day">
-                <h3>Вторник</h3>
-                <input type="text" placeholder="Дата: 22.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
-            <div class="day">
-                <h3>Среда</h3>
-                <input type="text" placeholder="Дата: 23.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
-            <div class="day">
-                <h3>Четверг</h3>
-                <input type="text" placeholder="Дата: 24.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
-            <div class="day">
-                <h3>Пятница</h3>
-                <input type="text" placeholder="Дата: 25.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
-            <div class="day">
-                <h3>Суббота</h3>
-                <input type="text" placeholder="Дата: 26.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
-            <div class="day">
-                <h3>Воскресенье</h3>
-                <input type="text" placeholder="Дата: 27.01" class="date-input">
-                <ul>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 1" class="task-input"></li>
-                    <li><input type="checkbox"> <input type="text" placeholder="Задача 2" class="task-input"></li>
-                </ul>
-            </div>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="year">Мой год</button>
+            <button class="tab-button" data-tab="month">Текущий месяц</button>
+            <button class="tab-button" data-tab="week">Неделя</button>
+        </div>
+        <div class="tab-content" id="year">
+            <h2>Мой год</h2>
+            <p>Здесь можно планировать год.</p>
+        </div>
+        <div class="tab-content hidden" id="month">
+            <h2>Текущий месяц</h2>
+            <p>Здесь можно планировать месяц.</p>
+        </div>
+        <div class="tab-content hidden" id="week">
+            <h2>Неделя</h2>
+            <p>Здесь можно планировать неделю.</p>
         </div>
     </div>
 
-    <script>
-        function goBack() {
-            window.location.href = 'main.html';
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

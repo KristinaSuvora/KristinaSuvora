@@ -7,35 +7,18 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <button onclick="goBack()" class="back-button">&larr; Назад</button>
-        <h1>Чат</h1>
-    </div>
-    <div id="chat-container">
-        <div id="messages"></div>
-        <div id="chat-input">
-            <input type="text" id="messageInput" placeholder="Введите сообщение..." />
-            <button onclick="sendMessage()">Отправить</button>
+    <div class="chat-container">
+        <h1>Я просто хочу поговорить</h1>
+        <div class="chat-box">
+            <div class="message received">Привет! Как настроение?</div>
+            <div class="message sent">Всё отлично, спасибо!</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Введите сообщение..." id="chatInput">
+            <button id="sendMessage">Отправить</button>
         </div>
     </div>
 
-    <script>
-        function goBack() {
-            window.location.href = 'main.html';
-        }
-
-        function sendMessage() {
-            const messageInput = document.getElementById('messageInput');
-            const messages = document.getElementById('messages');
-            
-            if (messageInput.value.trim() !== '') {
-                const newMessage = document.createElement('div');
-                newMessage.textContent = messageInput.value;
-                newMessage.classList.add('message');
-                messages.appendChild(newMessage);
-                messageInput.value = '';
-            }
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
