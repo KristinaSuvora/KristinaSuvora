@@ -5,40 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меню</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Set the selected background color from localStorage
+        document.addEventListener("DOMContentLoaded", function () {
+            const selectedColor = localStorage.getItem("favoriteColor");
+            if (selectedColor) {
+                document.body.style.backgroundColor = selectedColor;
+            }
+        });
+    </script>
 </head>
 <body>
-    <header class="menu-header">
-        <div class="logo">Мой Мир</div>
-        <button class="logout-btn" onclick="logout()">Выход</button>
-    </header>
+    <div class="menu-container">
+        <h1>Меню</h1>
+        <p>Добро пожаловать, Кристина!</p>
+        <p>Ваша мечта: сделать крутое приложение и получить кучу бабок</p>
 
-    <nav class="horizontal-menu">
-        <button class="menu-btn" onclick="navigateTo('planner.html')">Планер</button>
-        <button class="menu-btn" onclick="navigateTo('short_trips.html')">Ближайшие путешествия</button>
-        <button class="menu-btn" onclick="navigateTo('long_trips.html')">Дальние путешествия</button>
-        <button class="menu-btn" onclick="navigateTo('chat.html')">Чат</button>
-        <button class="menu-btn" onclick="navigateTo('inspiration.html')">Вдохновение</button>
-    </nav>
+        <div class="menu-tabs">
+            <a href="planner.html" class="menu-tab">Планер</a>
+            <a href="places.html" class="menu-tab">Куда сходить</a>
+            <a href="short_trips.html" class="menu-tab">Ближайшие путешествия</a>
+            <a href="long_trips.html" class="menu-tab">Дальние путешествия</a>
+            <a href="inspiration.html" class="menu-tab">Вдохновение</a>
+            <a href="chat.html" class="menu-tab">Я просто хочу поговорить</a>
+        </div>
 
-    <main class="widgets-container">
-        <div class="widget">
-            <h2>Текущее время</h2>
-            <p id="current-time"></p>
-        </div>
-        <div class="widget">
-            <h2>Цитата дня</h2>
-            <p id="daily-quote"></p>
-        </div>
-        <div class="widget">
-            <h2>Настроение</h2>
-            <div class="mood-selector">
-                <span class="mood" data-mood="😃">😃</span>
-                <span class="mood" data-mood="😐">😐</span>
-                <span class="mood" data-mood="😢">😢</span>
-            </div>
-        </div>
-    </main>
+        <button class="logout-btn" onclick="logout()">Выйти</button>
+    </div>
 
-    <script src="js/menu.js"></script>
+    <script>
+        function logout() {
+            // Clear localStorage and redirect to registration
+            localStorage.clear();
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 </html>
