@@ -4,7 +4,7 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFF5D5;
+    background-color: #FFF5D5; /* Default color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +13,14 @@ body {
     transition: background-color 0.5s ease;
 }
 
-.centered-container {
+.menu-container {
     text-align: center;
     padding: 20px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
 }
 
 h1 {
@@ -33,22 +35,30 @@ p {
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    font-size: 1em;
-    margin: 10px 0 5px;
+.menu-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-input[type="text"], input[type="color"] {
-    padding: 10px;
+.menu-tab {
+    padding: 10px 15px;
     font-size: 1em;
-    border: 1px solid #ccc;
+    text-decoration: none;
+    background-color: #6A7C6C;
+    color: white;
     border-radius: 10px;
-    width: 80%;
-    margin-bottom: 10px;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-button {
+.menu-tab:hover {
+    background-color: #8B645A;
+    transform: scale(1.05);
+}
+
+.logout-btn {
     background-color: #6A7C6C;
     color: white;
     border: none;
@@ -60,32 +70,7 @@ button {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-button:hover {
+.logout-btn:hover {
     background-color: #8B645A;
     transform: scale(1.05);
-}
-
-.color-palette {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.color-option {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s, border 0.2s;
-}
-
-.color-option:hover {
-    transform: scale(1.1);
-}
-
-.color-option.selected {
-    border: 2px solid #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
