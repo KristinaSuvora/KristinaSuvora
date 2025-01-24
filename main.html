@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меню</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="menu">
-        <h1>Добро пожаловать, <span id="userName"></span>!</h1>
-        <p>Мы подготовили приложение специально для вас.</p>
-        <nav>
-            <ul>
-                <li><a href="planner.html">Планер</a></li>
-                <li><a href="places.html">Куда сходить?</a></li>
-                <li><a href="short_trips.html">Ближайшие путешествия</a></li>
-                <li><a href="long_trips.html">Дальние путешествия</a></li>
-                <li><a href="inspiration.html">Вдохновение</a></li>
-                <li><a href="chat.html">Я просто хочу поговорить</a></li>
-            </ul>
-        </nav>
+    <div class="centered-container">
+        <h1>Меню</h1>
+        <p>Добро пожаловать, <span id="userName"></span>!</p>
+        <p>Ваша мечта: <span id="userDream"></span></p>
+        <button onclick="logout()">Выйти</button>
     </div>
-
+    <script src="js/dynamicBackground.js"></script>
     <script>
-        // Apply user preferences
-        const userName = localStorage.getItem('name');
-        const favoriteColor = localStorage.getItem('favoriteColor');
+        // Load user data from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const name = localStorage.getItem('name');
+            const dream = localStorage.getItem('dream');
+            document.getElementById('userName').textContent = name || "Гость";
+            document.getElementById('userDream').textContent = dream || "Нет мечты";
+        });
 
-        document.getElementById('userName').textContent = userName;
-        document.body.style.backgroundColor = favoriteColor;
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>
